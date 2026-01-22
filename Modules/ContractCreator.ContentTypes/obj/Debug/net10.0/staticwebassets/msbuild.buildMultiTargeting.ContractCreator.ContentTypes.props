@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/ContractCreator.ContentTypes.props" />
+</Project>

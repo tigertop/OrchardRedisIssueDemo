@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Localization\" />
+  </ItemGroup>
+
+  <!-- Watcher include and excludes -->
+  <ItemGroup>
+      <Watch Include="**\*.cs" Exclude="Recipes\**;Assets\**;node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.HealthChecks" Version="3.0.0-preview-18891" />
+    <PackageReference Include="OrchardCore.Logging.Serilog" Version="3.0.0-preview-18891" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="3.0.0-preview-18891" />
+    <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+    <PackageReference Include="Serilog.Sinks.OpenTelemetry" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\ContractCreator.ContentTypes\ContractCreator.ContentTypes.csproj" />
+    <ProjectReference Include="..\ContractCreator.ServiceDefaults\ContractCreator.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>

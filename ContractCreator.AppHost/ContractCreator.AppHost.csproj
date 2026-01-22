@@ -1,0 +1,24 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.1.0">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContractCreator.CMS\ContractCreator.CMS.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.JavaScript" Version="13.1.0" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="13.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="redis-data\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>38b786b1-fea0-4bd9-a312-bb383653135e</UserSecretsId>
+  </PropertyGroup>
+
+</Project>
